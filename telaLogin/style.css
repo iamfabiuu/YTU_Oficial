@@ -45,7 +45,7 @@ body {
   padding: 24px;
   background:
     radial-gradient(120% 90% at 50% 0%, #1a4cbe 0%, var(--blue) 60%),
-    url("/src/image29.svg") center/cover no-repeat;
+    url("../src/image29.svg") center/cover no-repeat;
   background-blend-mode: overlay;
 }
 .hero__logo {
