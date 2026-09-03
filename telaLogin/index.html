@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Olá de novo!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="screen">
+      <header class="hero">
+        <img class="hero__logo" src="/src/logo.svg" alt="Logo" />
+      </header>
+
+      <main class="sheet">
+        <h1 class="sheet__title">Olá de novo!</h1>
+        <p class="sheet__subtitle">
+          Faça login para continuar sua aventura cultural.
+        </p>
+
+        <form class="form">
+          <div class="field">
+            <label for="email">E-mail</label>
+            <div class="input-wrap">
+              <svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="m2 7 10 6 10-6" />
+              </svg>
+              <input
+                id="email"
+                type="email"
+                placeholder="seuemail@exemplo.com"
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="senha">Senha</label>
+            <div class="input-wrap">
+              <svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="4" y="10" width="16" height="11" rx="2" />
+                <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+              </svg>
+              <input id="senha" type="password" placeholder="••••••••••" />
+            </div>
+          </div>
+
+          <div class="row">
+            <label class="check">
+              <input type="checkbox" />
+              <span class="box"></span>
+              <span class="check__text">Lembrar de mim</span>
+            </label>
+            <a class="link" href="#">Esqueceu a senha?</a>
+          </div>
+
+          <button class="btn btn--primary" type="submit">Entrar</button>
+
+          <div class="divider"><span>ou continue com</span></div>
+
+          <div class="socials">
+            <button class="btn btn--ghost" type="button">
+              <img src="/src/icons/google.svg" alt="" width="20" height="20" />Google
+            </button>
+            <button class="btn btn--ghost" type="button">
+              <img src="/src/icons/apple.svg" alt="" width="20" height="20" />Apple
+            </button>
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
