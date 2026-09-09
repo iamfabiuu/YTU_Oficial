@@ -5,39 +5,35 @@
     <meta charset="UTF-8">
 
     <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+          content="width=device-width, initial-scale=1.0">
 
     <title>Recife para viver</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="onboarding.css">
 </head>
 
 <body>
 
     <section class="pagina">
 
-
-        <!-- Cabeçalho -->
+        <!-- CABEÇALHO -->
         <header>
 
             <div class="logo">
-                <img src="./logo.svg" alt="logo">
+                <img src="/src/logo.svg" alt="Logo Recife para viver">
             </div>
-
 
             <button
                 class="pular"
                 type="button"
                 onclick="pularPagina()">
-
                 Pular
-
             </button>
 
         </header>
 
 
-        <!-- Conteúdo principal -->
+        <!-- CONTEÚDO PRINCIPAL -->
         <main>
 
             <p class="subtitulo">
@@ -46,7 +42,6 @@
 
 
             <h1>
-
                 A cultura
                 <br>
 
@@ -56,42 +51,34 @@
                 <span class="circulo">
                     você está.
                 </span>
-
             </h1>
 
 
             <p class="descricao">
-
                 Descubra lugares,
                 <br>
-
                 histórias e sabores que
                 <br>
-
                 fazem o Recife pulsar.
-
             </p>
 
 
-            <!-- Controles do slide -->
+            <!-- CONTROLES -->
             <div class="controles">
 
-
-                <!-- Indicadores -->
+                <!-- INDICADORES -->
                 <div
                     class="paginas"
                     aria-label="Slide 1 de 3">
 
                     <span class="ativo"></span>
-
                     <span></span>
-
                     <span></span>
 
                 </div>
 
 
-                <!-- Botão próximo -->
+                <!-- BOTÃO PRÓXIMO -->
                 <button
                     class="proximo"
                     type="button"
@@ -99,7 +86,7 @@
                     aria-label="Próximo slide">
 
                     →
-
+                    
                 </button>
 
             </div>
@@ -109,26 +96,22 @@
     </section>
 
 
-    <!-- JavaScript -->
+    <!-- JAVASCRIPT -->
     <script>
 
         function pularPagina() {
-
             console.log("Botão Pular clicado");
 
-            // Exemplo:
+            // Quando tiver a próxima página:
             // window.location.href = "home.html";
-
         }
 
 
         function proximoSlide() {
-
             console.log("Próximo slide");
 
             // Aqui será implementada
             // a troca dos slides.
-
         }
 
     </script>

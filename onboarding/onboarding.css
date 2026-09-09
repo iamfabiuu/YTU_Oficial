@@ -1,3 +1,6 @@
+/* ========================================
+   RESET
+======================================== */
 
 * {
     margin: 0;
@@ -5,6 +8,10 @@
     box-sizing: border-box;
 }
 
+
+/* ========================================
+   HTML / BODY
+======================================== */
 
 html,
 body {
@@ -16,7 +23,10 @@ body {
 body {
     background: #222;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 
     display: flex;
     justify-content: center;
@@ -24,6 +34,10 @@ body {
     overflow-x: hidden;
 }
 
+
+/* ========================================
+   PÁGINA
+======================================== */
 
 .pagina {
     position: relative;
@@ -37,12 +51,19 @@ body {
 
     background-color: #003CAF;
 
-    background-image: url('./image\ 46.svg');
+    background-image: url("/src/image 46.svg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     color: white;
 }
 
 
+/* ========================================
+   CABEÇALHO
+======================================== */
 
 header {
     position: relative;
@@ -51,7 +72,10 @@ header {
 
     width: 100%;
 
-    padding: 28px 27px 0;
+    padding:
+        28px
+        27px
+        0;
 
     display: flex;
 
@@ -61,11 +85,14 @@ header {
 }
 
 
-.logo {
-    width: 72px;
-    height: 60px;
+/* ========================================
+   LOGO
+======================================== */
 
-    position: relative;
+.logo {
+    width: 90px;
+
+    height: auto;
 
     display: flex;
 
@@ -74,6 +101,19 @@ header {
 }
 
 
+.logo img {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+}
+
+
+/* ========================================
+   BOTÃO "PULAR"
+======================================== */
+
 .pular {
     border: none;
 
@@ -81,7 +121,9 @@ header {
 
     color: #111;
 
-    padding: 8px 20px;
+    padding:
+        8px
+        20px;
 
     border-radius: 30px;
 
@@ -93,6 +135,9 @@ header {
 
     box-shadow:
         0 2px 3px rgba(0, 0, 0, 0.15);
+
+    transition:
+        transform 0.2s ease;
 }
 
 
@@ -101,20 +146,32 @@ header {
 }
 
 
+/* ========================================
+   CONTEÚDO PRINCIPAL
+======================================== */
+
 main {
     position: relative;
 
     z-index: 2;
 
-    min-height: calc(100vh - 100px);
+    min-height:
+        calc(100vh - 100px);
 
-    padding: 155px 27px 25px;
+    padding:
+        155px
+        27px
+        25px;
 
     display: flex;
 
     flex-direction: column;
 }
 
+
+/* ========================================
+   SUBTÍTULO
+======================================== */
 
 .subtitulo {
     margin-left: 13px;
@@ -133,6 +190,10 @@ main {
 }
 
 
+/* ========================================
+   TÍTULO
+======================================== */
+
 h1 {
     max-width: 300px;
 
@@ -145,6 +206,10 @@ h1 {
     letter-spacing: -1.5px;
 }
 
+
+/* ========================================
+   CÍRCULO AMARELO
+======================================== */
 
 .circulo {
     position: relative;
@@ -166,15 +231,22 @@ h1 {
     top: -8px;
     bottom: -8px;
 
-    border: 1.5px solid #ffe000;
+    border:
+        1.5px solid
+        #ffe000;
 
     border-radius: 50%;
 
-    transform: rotate(-5deg);
+    transform:
+        rotate(-5deg);
 
     z-index: -1;
 }
 
+
+/* ========================================
+   DESCRIÇÃO
+======================================== */
 
 .descricao {
     margin-top: 30px;
@@ -191,6 +263,10 @@ h1 {
 }
 
 
+/* ========================================
+   CONTROLES
+======================================== */
+
 .controles {
     margin-top: auto;
 
@@ -204,6 +280,10 @@ h1 {
 }
 
 
+/* ========================================
+   INDICADORES
+======================================== */
+
 .paginas {
     display: flex;
 
@@ -214,7 +294,10 @@ h1 {
 
 
 .paginas span {
+    display: block;
+
     width: 10px;
+
     height: 10px;
 
     border-radius: 50%;
@@ -222,6 +305,8 @@ h1 {
     background: #ddd;
 }
 
+
+/* INDICADOR ATIVO */
 
 .paginas .ativo {
     width: 46px;
@@ -232,8 +317,13 @@ h1 {
 }
 
 
+/* ========================================
+   BOTÃO PRÓXIMO
+======================================== */
+
 .proximo {
     width: 71px;
+
     height: 28px;
 
     border: none;
@@ -253,6 +343,11 @@ h1 {
     align-items: center;
 
     justify-content: center;
+
+    line-height: 1;
+
+    transition:
+        transform 0.2s ease;
 }
 
 
@@ -261,6 +356,9 @@ h1 {
 }
 
 
+/* ========================================
+   TELAS MENORES
+======================================== */
 
 @media (max-width: 330px) {
 
@@ -283,21 +381,6 @@ h1 {
 
     .descricao {
         font-size: 16px;
-    }
-
-}
-
-
-
-@media (max-height: 650px) {
-
-    main {
-        padding-top: 90px;
-    }
-
-
-    .descricao {
-        margin-top: 20px;
     }
 
 }
