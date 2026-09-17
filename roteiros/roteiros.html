@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roteiros</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="roteiros.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <section class="hero">
+
+            <button class="back-button" id="backButton" aria-label="Voltar">
+                <span>‹</span>
+            </button>
+
+            <div class="hero-pattern">
+
+                <div class="pattern-shape shape-1"></div>
+                <div class="pattern-shape shape-2"></div>
+                <div class="pattern-shape shape-3"></div>
+                <div class="pattern-shape shape-4"></div>
+                <div class="pattern-shape shape-5"></div>
+                <div class="pattern-shape shape-6"></div>
+
+                <div class="route-text">
+                    <span>ROTA DA SEMANA</span>
+
+                    <h1>
+                        Recife a pé e<br>
+                        sem pressa
+                    </h1>
+                </div>
+
+                <div class="sun">
+                    <div class="sun-center"></div>
+
+                    <span class="ray ray-1"></span>
+                    <span class="ray ray-2"></span>
+                    <span class="ray ray-3"></span>
+                    <span class="ray ray-4"></span>
+                    <span class="ray ray-5"></span>
+                    <span class="ray ray-6"></span>
+                    <span class="ray ray-7"></span>
+                    <span class="ray ray-8"></span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="content">
+
+            <div class="route-info">
+
+                <div class="info-item">
+                    <div class="info-icon clock-icon">
+                        <span></span>
+                    </div>
+
+                    <div>
+                        <strong>DURAÇÃO</strong>
+                        <b>3 horas</b>
+                    </div>
+                </div>
+
+
+                <div class="info-item">
+                    <div class="info-icon map-icon">
+                        <span></span>
+                    </div>
+
+                    <div>
+                        <strong>DISTÂNCIA</strong>
+                        <b>2,8 Km</b>
+                    </div>
+                </div>
+
+
+                <div class="info-item">
+                    <div class="info-icon cost-icon">
+                        <span></span>
+                    </div>
+
+                    <div>
+                        <strong>CUSTO</strong>
+                        <b>Grátis</b>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <p class="description">
+                Uma manhã para sentir o centro histórico com calma, música
+                e histórias pelo caminho.
+            </p>
+
+
+            <div class="route-heading">
+
+                <div>
+                    <span>SEU CAMINHO</span>
+                    <h2>4 paradas</h2>
+                </div>
+
+                <button class="map-link" id="mapLink">
+                    Ver no mapa
+                </button>
+
+            </div>
+
+
+            <div class="stops">
+
+
+                <article class="stop">
+
+                    <div class="stop-icon stop-zero">
+                        <div class="map-symbol">
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div class="stop-info">
+                        <span class="stop-time">
+                            09:00 • PARADA 1
+                        </span>
+
+                        <h3>Marco Zero</h3>
+
+                        <p>
+                            Comece sentindo o coração da cidade
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <article class="stop">
+
+                    <div class="stop-icon stop-frevo">
+
+                        <div class="mask mask-blue">●</div>
+                        <div class="mask mask-orange">●</div>
+
+                    </div>
+
+                    <div class="stop-info">
+                        <span class="stop-time">
+                            09:30 • PARADA 2
+                        </span>
+
+                        <h3>Paço do Frevo</h3>
+
+                        <p>
+                            Mergulhe no ritmo pernambucano
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <article class="stop">
+
+                    <div class="stop-icon stop-sertao">
+
+                        <div class="accordion">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                    </div>
+
+                    <div class="stop-info">
+                        <span class="stop-time">
+                            11:00 • PARADA 3
+                        </span>
+
+                        <h3>Cais do Sertão</h3>
+
+                        <p>
+                            Conheça histórias do nosso sertão
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <article class="stop">
+
+                    <div class="stop-icon stop-bom-jesus">
+
+                        <div class="small-sun">
+                            <div></div>
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                    </div>
+
+                    <div class="stop-info">
+                        <span class="stop-time">
+                            12:00 • PARADA 4
+                        </span>
+
+                        <h3>Rua do Bom Jesus</h3>
+
+                        <p>
+                            A terceira rua mais bonita do mundo
+                        </p>
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="bottom-actions">
+
+                <button class="favorite-button" id="favoriteButton">
+                    <span>☆</span>
+                </button>
+
+                <button class="route-button" id="routeButton">
+                    Criar rota até aqui
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="roteiros.js"></script>
+
+</body>
+</html>

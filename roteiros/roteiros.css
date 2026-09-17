@@ -1,0 +1,1200 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --blue: #0647bd;
+    --blue-dark: #0043b8;
+    --hero-blue: #1452c2;
+    --hero-dark: #1245aa;
+    --cream: #fffaf1;
+    --yellow: #ffc400;
+    --text: #080808;
+    --gray: #8a8a8a;
+    --light-gray: #b8b8b8;
+    --red: #ed3b28;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background: #202020;
+
+    font-family: "Poppins", Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    overflow-x: hidden;
+}
+
+button {
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   APLICATIVO
+   ========================================== */
+
+.app {
+    width: 100%;
+    max-width: 430px;
+    min-height: 100vh;
+
+    position: relative;
+
+    background: transparent;
+
+    overflow: visible;
+}
+
+
+/* ==========================================
+   HERO
+   ========================================== */
+
+.hero {
+    width: 100%;
+    height: min(72vw, 310px);
+
+    min-height: 270px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.hero-pattern {
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at 15% 15%,
+            rgba(255,255,255,0.08) 0 18%,
+            transparent 19%
+        ),
+        radial-gradient(
+            ellipse at 85% 30%,
+            rgba(0,35,130,0.35) 0 18%,
+            transparent 19%
+        ),
+        radial-gradient(
+            ellipse at 35% 85%,
+            rgba(0,35,130,0.3) 0 25%,
+            transparent 26%
+        ),
+        linear-gradient(
+            135deg,
+            #1554c5,
+            #164fc0
+        );
+}
+
+
+/* ==========================================
+   PADRÃO DECORATIVO
+   ========================================== */
+
+.pattern-shape {
+    position: absolute;
+
+    border: 14px solid rgba(4, 48, 145, 0.42);
+
+    opacity: 0.7;
+
+    border-radius: 50%;
+}
+
+.shape-1 {
+    width: 155px;
+    height: 155px;
+
+    top: -75px;
+    left: -40px;
+
+    transform: rotate(30deg);
+}
+
+.shape-2 {
+    width: 125px;
+    height: 190px;
+
+    top: 30px;
+    left: 70px;
+
+    border-radius: 60% 40% 50% 50%;
+
+    transform: rotate(35deg);
+}
+
+.shape-3 {
+    width: 180px;
+    height: 100px;
+
+    right: -30px;
+    top: -20px;
+
+    border-radius: 50%;
+
+    transform: rotate(-25deg);
+}
+
+.shape-4 {
+    width: 210px;
+    height: 130px;
+
+    left: -50px;
+    bottom: -55px;
+
+    border-radius: 50%;
+
+    transform: rotate(-15deg);
+}
+
+.shape-5 {
+    width: 140px;
+    height: 70px;
+
+    right: 10px;
+    bottom: 5px;
+
+    border-radius: 50%;
+
+    transform: rotate(20deg);
+}
+
+.shape-6 {
+    width: 90px;
+    height: 90px;
+
+    left: 165px;
+    top: 90px;
+
+    border-radius: 45%;
+
+    transform: rotate(40deg);
+}
+
+
+/* ==========================================
+   BOTÃO VOLTAR
+   ========================================== */
+
+.back-button {
+    position: absolute;
+
+    top: 20px;
+    left: 22px;
+
+    width: 43px;
+    height: 43px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: var(--blue);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 20;
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+
+    transition: transform 0.15s ease;
+}
+
+.back-button span {
+    font-family: Arial, sans-serif;
+
+    font-size: 34px;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    transform: translateY(-3px);
+}
+
+
+/* ==========================================
+   TEXTO DA ROTA
+   ========================================== */
+
+.route-text {
+    position: absolute;
+
+    left: 30px;
+    top: 98px;
+
+    z-index: 5;
+}
+
+.route-text span {
+    display: block;
+
+    color: #ffd000;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+.route-text h1 {
+    color: #ffffff;
+
+    font-size: clamp(27px, 8vw, 32px);
+
+    font-weight: 600;
+
+    line-height: 1.35;
+
+    letter-spacing: -0.7px;
+}
+
+
+/* ==========================================
+   SOL
+   ========================================== */
+
+.sun {
+    position: absolute;
+
+    width: 115px;
+    height: 115px;
+
+    right: 20px;
+    top: 107px;
+
+    z-index: 5;
+}
+
+.sun-center {
+    position: absolute;
+
+    width: 49px;
+    height: 49px;
+
+    left: 33px;
+    top: 33px;
+
+    border-radius: 50%;
+
+    background: #ffc400;
+}
+
+.ray {
+    position: absolute;
+
+    width: 12px;
+    height: 28px;
+
+    background: #ffc400;
+
+    border-radius: 8px;
+}
+
+.ray-1 {
+    left: 52px;
+    top: 0;
+}
+
+.ray-2 {
+    right: 6px;
+    top: 22px;
+
+    transform: rotate(45deg);
+}
+
+.ray-3 {
+    right: 0;
+    top: 52px;
+
+    transform: rotate(90deg);
+}
+
+.ray-4 {
+    right: 7px;
+    bottom: 20px;
+
+    transform: rotate(135deg);
+}
+
+.ray-5 {
+    left: 52px;
+    bottom: 0;
+}
+
+.ray-6 {
+    left: 10px;
+    bottom: 20px;
+
+    transform: rotate(45deg);
+}
+
+.ray-7 {
+    left: 0;
+    top: 52px;
+
+    transform: rotate(90deg);
+}
+
+.ray-8 {
+    left: 10px;
+    top: 20px;
+
+    transform: rotate(135deg);
+}
+
+
+/* ==========================================
+   CONTEÚDO
+   ========================================== */
+
+.content {
+    position: relative;
+
+    z-index: 10;
+
+    width: 100%;
+
+    margin-top: -1px;
+
+    min-height: 560px;
+
+    padding: 47px 20px 25px;
+
+    background: var(--cream);
+
+    border-radius: 31px 31px 0 0;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   INFORMAÇÕES PRINCIPAIS
+   ========================================== */
+
+.route-info {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 8px;
+}
+
+.info-item {
+    display: flex;
+
+    align-items: center;
+
+    min-width: 0;
+}
+
+.info-icon {
+    position: relative;
+
+    width: 24px;
+    height: 24px;
+
+    flex-shrink: 0;
+
+    margin-right: 7px;
+
+    color: var(--blue);
+}
+
+.info-item strong {
+    display: block;
+
+    color: #111;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    line-height: 1.15;
+}
+
+.info-item b {
+    display: block;
+
+    color: #111;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    line-height: 1.4;
+}
+
+
+/* ==========================================
+   RELÓGIO
+   ========================================== */
+
+.clock-icon {
+    border: 2px solid var(--blue);
+
+    border-radius: 50%;
+}
+
+.clock-icon::before {
+    content: "";
+
+    position: absolute;
+
+    width: 2px;
+    height: 7px;
+
+    left: 9px;
+    top: 4px;
+
+    background: var(--blue);
+
+    border-radius: 2px;
+}
+
+.clock-icon::after {
+    content: "";
+
+    position: absolute;
+
+    width: 6px;
+    height: 2px;
+
+    left: 9px;
+    top: 11px;
+
+    background: var(--blue);
+
+    border-radius: 2px;
+
+    transform: rotate(25deg);
+
+    transform-origin: left center;
+}
+
+
+/* ==========================================
+   MAPA
+   ========================================== */
+
+.map-icon {
+    border: 2px solid var(--blue);
+
+    border-radius: 2px;
+
+    transform: skewY(-5deg);
+}
+
+.map-icon::before {
+    content: "";
+
+    position: absolute;
+
+    left: 7px;
+    top: -2px;
+
+    width: 2px;
+    height: 24px;
+
+    background: var(--blue);
+}
+
+.map-icon::after {
+    content: "";
+
+    position: absolute;
+
+    right: 6px;
+    top: -2px;
+
+    width: 2px;
+    height: 24px;
+
+    background: var(--blue);
+}
+
+
+/* ==========================================
+   CUSTO
+   ========================================== */
+
+.cost-icon {
+    width: 22px;
+    height: 18px;
+
+    border: 2px solid var(--blue);
+
+    border-radius: 3px;
+
+    margin-top: 2px;
+}
+
+.cost-icon::before {
+    content: "";
+
+    position: absolute;
+
+    left: 4px;
+    top: -5px;
+
+    width: 11px;
+    height: 5px;
+
+    border: 2px solid var(--blue);
+
+    border-bottom: none;
+
+    border-radius: 4px 4px 0 0;
+}
+
+.cost-icon::after {
+    content: "";
+
+    position: absolute;
+
+    left: 4px;
+    top: 6px;
+
+    width: 10px;
+    height: 2px;
+
+    background: var(--blue);
+
+    box-shadow: 0 4px 0 var(--blue);
+}
+
+
+/* ==========================================
+   DESCRIÇÃO
+   ========================================== */
+
+.description {
+    max-width: 330px;
+
+    margin-top: 13px;
+
+    color: #858585;
+
+    font-size: 10px;
+
+    line-height: 1.4;
+}
+
+
+/* ==========================================
+   TÍTULO DO CAMINHO
+   ========================================== */
+
+.route-heading {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    margin-top: 15px;
+}
+
+.route-heading > div {
+    min-width: 0;
+}
+
+.route-heading span {
+    display: block;
+
+    color: var(--red);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    margin-bottom: 3px;
+}
+
+.route-heading h2 {
+    color: #151515;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    line-height: 1.2;
+}
+
+.map-link {
+    padding: 0;
+
+    background: transparent;
+
+    color: var(--blue);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    margin-bottom: 2px;
+}
+
+
+/* ==========================================
+   PARADAS
+   ========================================== */
+
+.stops {
+    width: 100%;
+
+    margin-top: 14px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.stop {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    min-height: 56px;
+}
+
+.stop-icon {
+    width: 46px;
+    height: 46px;
+
+    flex-shrink: 0;
+
+    margin-right: 11px;
+
+    border-radius: 14px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   MARCO ZERO
+   ========================================== */
+
+.stop-zero {
+    background:
+        radial-gradient(circle at center,
+            #f6d35a 0 20%,
+            transparent 21%
+        ),
+        conic-gradient(
+            #e94731,
+            #0d62bd,
+            #e94731,
+            #f1c52e,
+            #0d62bd,
+            #e94731
+        );
+}
+
+.map-symbol {
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+
+    border: 3px solid #0752b9;
+
+    background: #f0bd38;
+
+    position: relative;
+}
+
+.map-symbol::before,
+.map-symbol::after {
+    content: "";
+
+    position: absolute;
+
+    background: #0752b9;
+}
+
+.map-symbol::before {
+    width: 24px;
+    height: 3px;
+
+    left: 1px;
+    top: 12px;
+
+    transform: rotate(25deg);
+}
+
+.map-symbol::after {
+    width: 3px;
+    height: 24px;
+
+    left: 12px;
+    top: 1px;
+
+    transform: rotate(25deg);
+}
+
+
+/* ==========================================
+   PAÇO DO FREVO
+   ========================================== */
+
+.stop-frevo {
+    background: #ffe3dc;
+}
+
+.mask {
+    position: absolute;
+
+    width: 26px;
+    height: 20px;
+
+    border-radius: 45% 45% 50% 50%;
+
+    top: 14px;
+
+    transform: rotate(-10deg);
+}
+
+.mask::before,
+.mask::after {
+    content: "";
+
+    position: absolute;
+
+    width: 6px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    top: 7px;
+}
+
+.mask::before {
+    left: 5px;
+}
+
+.mask::after {
+    right: 5px;
+}
+
+.mask-blue {
+    left: 8px;
+
+    background: #0752b9;
+}
+
+.mask-orange {
+    right: 7px;
+
+    background: #ff641e;
+
+    transform: rotate(10deg);
+}
+
+
+/* ==========================================
+   CAIS DO SERTÃO
+   ========================================== */
+
+.stop-sertao {
+    background: #d92312;
+}
+
+.accordion {
+    width: 30px;
+    height: 25px;
+
+    transform: rotate(-12deg);
+
+    position: relative;
+}
+
+.accordion::before {
+    content: "";
+
+    position: absolute;
+
+    left: 2px;
+    top: 2px;
+
+    width: 27px;
+    height: 21px;
+
+    background: #ffffff;
+
+    clip-path: polygon(
+        0 20%,
+        100% 0,
+        100% 80%,
+        0 100%
+    );
+}
+
+.accordion span {
+    position: relative;
+
+    display: block;
+
+    width: 19px;
+    height: 2px;
+
+    background: #0752b9;
+
+    margin: 3px 0 0 6px;
+
+    z-index: 2;
+}
+
+
+/* ==========================================
+   BOM JESUS
+   ========================================== */
+
+.stop-bom-jesus {
+    background: #fff1a7;
+}
+
+.small-sun {
+    width: 30px;
+    height: 30px;
+
+    position: relative;
+}
+
+.small-sun div {
+    position: absolute;
+
+    width: 14px;
+    height: 14px;
+
+    left: 8px;
+    top: 8px;
+
+    border-radius: 50%;
+
+    background: #ff6500;
+}
+
+.small-sun span {
+    position: absolute;
+
+    width: 4px;
+    height: 9px;
+
+    background: #ff6500;
+
+    border-radius: 4px;
+
+    left: 13px;
+    top: 0;
+
+    transform-origin: 2px 15px;
+}
+
+.small-sun span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.small-sun span:nth-child(3) {
+    transform: rotate(90deg);
+}
+
+.small-sun span:nth-child(4) {
+    transform: rotate(135deg);
+}
+
+.small-sun span:nth-child(5) {
+    transform: rotate(180deg);
+}
+
+.small-sun span:nth-child(6) {
+    transform: rotate(225deg);
+}
+
+.small-sun span:nth-child(7) {
+    transform: rotate(270deg);
+}
+
+.small-sun span:nth-child(8) {
+    transform: rotate(315deg);
+}
+
+
+/* ==========================================
+   TEXTO DAS PARADAS
+   ========================================== */
+
+.stop-info {
+    min-width: 0;
+
+    flex: 1;
+}
+
+.stop-time {
+    display: block;
+
+    color: var(--red);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    margin-bottom: 2px;
+}
+
+.stop-info h3 {
+    color: #101010;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    line-height: 1.35;
+}
+
+.stop-info p {
+    color: #b0b0b0;
+
+    font-size: 8px;
+
+    line-height: 1.35;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ==========================================
+   AÇÕES INFERIORES
+   ========================================== */
+
+.bottom-actions {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 19px;
+
+    margin-top: 17px;
+}
+
+.favorite-button {
+    width: 51px;
+    height: 51px;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background: #ffe8e4;
+
+    color: var(--blue);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        transform 0.15s ease,
+        background 0.2s ease;
+}
+
+.favorite-button span {
+    font-family: Arial, sans-serif;
+
+    font-size: 32px;
+
+    line-height: 1;
+
+    color: var(--blue);
+
+    transform: translateY(-1px);
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.favorite-button.active span {
+    color: var(--yellow);
+
+    transform: translateY(-1px) scale(1.05);
+}
+
+
+/* ==========================================
+   BOTÃO ROTA
+   ========================================== */
+
+.route-button {
+    height: 51px;
+
+    flex: 1;
+
+    min-width: 0;
+
+    border-radius: 12px;
+
+    background: var(--blue-dark);
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: transform 0.15s ease;
+}
+
+
+/* ==========================================
+   EFEITOS
+   ========================================== */
+
+.back-button:active,
+.favorite-button:active,
+.route-button:active {
+    transform: scale(0.97);
+}
+
+.map-link:active {
+    transform: scale(0.98);
+}
+
+
+/* ==========================================
+   TELAS PEQUENAS
+   ========================================== */
+
+@media (max-width: 360px) {
+
+    .route-text {
+        left: 22px;
+        top: 92px;
+    }
+
+    .route-text span {
+        font-size: 9px;
+        letter-spacing: 2.5px;
+    }
+
+    .route-text h1 {
+        font-size: 26px;
+    }
+
+    .sun {
+        width: 95px;
+        height: 95px;
+
+        right: 12px;
+        top: 110px;
+    }
+
+    .sun-center {
+        width: 42px;
+        height: 42px;
+
+        left: 27px;
+        top: 27px;
+    }
+
+    .content {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .info-item strong {
+        font-size: 8px;
+    }
+
+    .info-item b {
+        font-size: 10px;
+    }
+
+    .info-icon {
+        margin-right: 5px;
+    }
+
+    .stop-icon {
+        margin-right: 8px;
+    }
+
+    .bottom-actions {
+        gap: 12px;
+    }
+
+    .route-button {
+        font-size: 12px;
+    }
+}
+
+
+/* ==========================================
+   DESKTOP
+   ========================================== */
+
+@media (min-width: 431px) {
+
+    body {
+        padding: 24px 0;
+    }
+
+    .app {
+        width: 430px;
+
+        box-shadow:
+            0 0 25px rgba(0, 0, 0, 0.3);
+    }
+}

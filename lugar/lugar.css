@@ -1,0 +1,910 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --blue: #0647bd;
+    --blue-dark: #0043b8;
+    --cream: #fffaf1;
+    --text: #080808;
+    --gray: #747474;
+    --light-gray: #b3b3b3;
+    --green: #75c97c;
+    --yellow: #ffc400;
+    --red: #ed3b28;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background: #202020;
+
+    font-family: "Poppins", Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 0;
+
+    overflow-x: hidden;
+}
+
+button {
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.app {
+    width: 100%;
+    max-width: 430px;
+    min-height: 100vh;
+
+    background: transparent;
+
+    position: relative;
+
+    overflow: visible;
+}
+
+
+/* ==========================================
+   IMAGEM PRINCIPAL
+   ========================================== */
+
+.hero {
+    width: 100%;
+
+    height: min(76.92vw, 280px);
+
+    min-height: 250px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* ==========================================
+   BOTÃO VOLTAR
+   ========================================== */
+
+.back-button {
+    position: absolute;
+
+    top: clamp(16px, 5.8vw, 21px);
+    left: clamp(16px, 6vw, 22px);
+
+    width: clamp(40px, 11.8vw, 43px);
+    height: clamp(40px, 11.8vw, 43px);
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    color: var(--blue);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 30;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.15s ease;
+}
+
+.back-button span {
+    font-family: Arial, sans-serif;
+
+    font-size: clamp(30px, 9vw, 34px);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   ÍCONE DE CATEGORIA
+   ========================================== */
+
+.category-icon {
+    position: absolute;
+
+    width: clamp(90px, 28.8vw, 105px);
+    height: clamp(90px, 28.8vw, 105px);
+
+    left: 50%;
+
+    top: clamp(105px, 34.3vw, 125px);
+
+    transform: translateX(-50%);
+
+    z-index: 25;
+}
+
+.category-background {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    left: 0;
+    top: 0;
+
+    object-fit: contain;
+
+    z-index: 1;
+}
+
+.category-masks {
+    position: absolute;
+
+    width: 71.5%;
+    height: 71.5%;
+
+    left: 19%;
+    top: 19%;
+
+    object-fit: contain;
+
+    z-index: 2;
+}
+
+.category-icon svg {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+}
+
+
+/* ==========================================
+   CARD PRINCIPAL
+   ========================================== */
+
+.content {
+    position: relative;
+
+    z-index: 20;
+
+    width: 100%;
+
+    margin-top: clamp(-17px, -8.8vw, -30px);
+
+    min-height: 545px;
+
+    padding:
+        clamp(25px, 6.9vw, 25px)
+        clamp(20px, 5.5vw, 20px)
+        24px;
+
+    background: var(--cream);
+
+    border-radius: 25px 25px 0 0;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   TAGS
+   ========================================== */
+
+.tags {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 10px;
+}
+
+.tag {
+    min-height: 21px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 11px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.culture {
+    background: #ffe8e4;
+
+    color: #ed3d2c;
+}
+
+.economy {
+    min-width: 86px;
+
+    background: #ffc51c;
+
+    color: #151515;
+
+    font-size: 9px;
+}
+
+
+/* ==========================================
+   TÍTULO
+   ========================================== */
+
+h1 {
+    color: #050505;
+
+    font-size: clamp(25px, 7.7vw, 28px);
+
+    font-weight: 800;
+
+    letter-spacing: -0.8px;
+
+    line-height: 1.15;
+
+    margin-bottom: 9px;
+}
+
+
+/* ==========================================
+   AVALIAÇÃO
+   ========================================== */
+
+.rating {
+    min-height: 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 4px;
+
+    color: #444;
+
+    font-size: clamp(10px, 3vw, 11px);
+}
+
+.rating .star {
+    color: #ffbd00;
+
+    font-size: 16px;
+
+    line-height: 1;
+}
+
+.rating strong {
+    font-weight: 600;
+
+    color: #555;
+}
+
+.distance {
+    margin-left: 12px;
+
+    color: #333;
+}
+
+
+/* ==========================================
+   DESCRIÇÃO
+   ========================================== */
+
+.description {
+    width: 100%;
+
+    max-width: 320px;
+
+    margin-top: 7px;
+
+    color: #686868;
+
+    font-size: clamp(10px, 2.9vw, 10.5px);
+
+    line-height: 1.38;
+}
+
+
+/* ==========================================
+   CARDS DE HORÁRIO E ENTRADA
+   ========================================== */
+
+.info-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+    gap: clamp(10px, 4.7vw, 17px);
+
+    margin-top: 14px;
+}
+
+.info-card {
+    width: 100%;
+
+    height: 68px;
+
+    background: #fffdf9;
+
+    border: 1px solid #858585;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 9px;
+
+    min-width: 0;
+}
+
+.info-icon {
+    width: 27px;
+    height: 27px;
+
+    flex-shrink: 0;
+
+    margin-right: 9px;
+
+    position: relative;
+
+    color: var(--blue);
+}
+
+
+/* ==========================================
+   ÍCONE RELÓGIO
+   ========================================== */
+
+.clock-icon {
+    border: 2px solid var(--blue);
+
+    border-radius: 50%;
+}
+
+.clock-icon::before {
+    content: "";
+
+    position: absolute;
+
+    width: 2px;
+    height: 8px;
+
+    left: 11px;
+    top: 4px;
+
+    background: var(--blue);
+
+    border-radius: 2px;
+}
+
+.clock-icon::after {
+    content: "";
+
+    position: absolute;
+
+    width: 7px;
+    height: 2px;
+
+    left: 11px;
+    top: 12px;
+
+    background: var(--blue);
+
+    border-radius: 2px;
+
+    transform: rotate(25deg);
+
+    transform-origin: left center;
+}
+
+
+/* ==========================================
+   ÍCONE INGRESSO
+   ========================================== */
+
+.ticket-icon {
+    width: 23px;
+    height: 19px;
+
+    margin-left: 1px;
+
+    border: 2px solid var(--blue);
+
+    border-radius: 3px;
+}
+
+.ticket-icon::before {
+    content: "";
+
+    position: absolute;
+
+    left: 5px;
+    top: 4px;
+
+    width: 10px;
+    height: 2px;
+
+    background: var(--blue);
+
+    box-shadow: 0 5px 0 var(--blue);
+}
+
+.ticket-icon::after {
+    content: "";
+
+    position: absolute;
+
+    right: -2px;
+    top: -2px;
+
+    width: 5px;
+    height: 19px;
+
+    background: #fffdf9;
+
+    border-left: 2px dotted var(--blue);
+}
+
+
+/* ==========================================
+   TEXTO DOS CARDS
+   ========================================== */
+
+.info-text {
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+
+    overflow: hidden;
+}
+
+.info-text small {
+    color: #5f5f5f;
+
+    font-size: clamp(8px, 2.4vw, 8.5px);
+
+    line-height: 1.2;
+}
+
+.info-text strong {
+    color: #111;
+
+    font-size: clamp(9.5px, 2.9vw, 10.5px);
+
+    font-weight: 500;
+
+    line-height: 1.45;
+
+    white-space: nowrap;
+}
+
+.info-text em {
+    color: var(--green);
+
+    font-size: clamp(9px, 2.6vw, 9.5px);
+
+    font-style: normal;
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+}
+
+
+/* ==========================================
+   ACESSIBILIDADE
+   ========================================== */
+
+.accessibility {
+    width: 100%;
+
+    min-height: 94px;
+
+    height: auto;
+
+    margin-top: 13px;
+
+    padding: 12px 14px 10px;
+
+    background: #e8efff;
+
+    border-radius: 19px;
+}
+
+.access-title {
+    display: flex;
+
+    align-items: center;
+}
+
+.access-icon {
+    width: 35px;
+    height: 35px;
+
+    flex-shrink: 0;
+
+    margin-right: 9px;
+
+    border-radius: 9px;
+
+    background: var(--blue);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.access-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.access-title small {
+    display: block;
+
+    color: var(--blue);
+
+    font-size: 8px;
+
+    line-height: 1.2;
+}
+
+.access-title strong {
+    display: block;
+
+    color: #101010;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    line-height: 1.4;
+}
+
+
+/* ==========================================
+   TAGS DE ACESSIBILIDADE
+   ========================================== */
+
+.access-tags {
+    display: flex;
+
+    gap: 7px;
+
+    margin-top: 7px;
+
+    width: 100%;
+}
+
+.access-tags span {
+    height: 20px;
+
+    padding: 0 13px;
+
+    background: var(--blue);
+
+    color: #ffffff;
+
+    border-radius: 11px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 8px;
+
+    white-space: nowrap;
+}
+
+
+/* ==========================================
+   LOCALIZAÇÃO
+   ========================================== */
+
+.location {
+    margin-top: 21px;
+}
+
+.section-label {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: var(--red);
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+.address-row {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 10px;
+}
+
+.address-row > div {
+    min-width: 0;
+}
+
+.address-row h2 {
+    color: #161616;
+
+    font-size: clamp(15px, 4.4vw, 16px);
+
+    font-weight: 500;
+
+    line-height: 1.25;
+}
+
+.address-row p {
+    color: #b0b0b0;
+
+    font-size: clamp(9px, 2.6vw, 9.5px);
+
+    margin-top: 4px;
+
+    white-space: nowrap;
+}
+
+.pin {
+    color: #aaa;
+
+    font-size: 17px;
+
+    vertical-align: -2px;
+}
+
+.map-button {
+    flex-shrink: 0;
+
+    padding: 0;
+
+    background: transparent;
+
+    color: var(--blue);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    text-decoration: underline;
+
+    margin-bottom: 1px;
+}
+
+
+/* ==========================================
+   BOTÕES INFERIORES
+   ========================================== */
+
+.bottom-actions {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: clamp(14px, 5.2vw, 19px);
+
+    margin-top: 27px;
+}
+
+
+/* ==========================================
+   BOTÃO FAVORITO
+   ========================================== */
+
+.favorite-button {
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background: #ffe8e4;
+
+    color: var(--blue);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        background 0.2s ease,
+        transform 0.15s ease;
+}
+
+.favorite-button span {
+    font-family: Arial, sans-serif;
+
+    font-size: 32px;
+
+    line-height: 1;
+
+    color: var(--blue);
+
+    transform: translateY(-1px);
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* ESTRELA AMARELA */
+
+.favorite-button.active span {
+    color: var(--yellow);
+
+    transform: translateY(-1px) scale(1.05);
+}
+
+
+/* ==========================================
+   BOTÃO CRIAR ROTA
+   ========================================== */
+
+.route-button {
+    height: 50px;
+
+    flex: 1;
+
+    min-width: 0;
+
+    border-radius: 12px;
+
+    background: var(--blue-dark);
+
+    color: #ffffff;
+
+    font-size: clamp(13px, 3.9vw, 14px);
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.2s ease,
+        transform 0.15s ease;
+}
+
+
+/* ==========================================
+   EFEITO DE CLIQUE
+   ========================================== */
+
+.back-button:active {
+    transform: scale(0.96);
+}
+
+.favorite-button:active {
+    transform: scale(0.96);
+}
+
+.route-button:active {
+    transform: scale(0.98);
+}
+
+.map-button:active {
+    transform: scale(0.98);
+}
+
+
+/* ==========================================
+   CELULARES MUITO PEQUENOS
+   ========================================== */
+
+@media (max-width: 340px) {
+
+    .content {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .info-grid {
+        gap: 8px;
+    }
+
+    .info-card {
+        padding: 7px;
+    }
+
+    .info-icon {
+        margin-right: 6px;
+    }
+
+    .accessibility {
+        padding-left: 11px;
+        padding-right: 11px;
+    }
+
+    .access-tags {
+        gap: 4px;
+    }
+
+    .access-tags span {
+        padding-left: 9px;
+        padding-right: 9px;
+
+        font-size: 7px;
+    }
+
+    .bottom-actions {
+        gap: 10px;
+    }
+
+    .favorite-button {
+        width: 48px;
+        height: 48px;
+    }
+
+    .route-button {
+        height: 48px;
+        font-size: 12px;
+    }
+}
+
+
+/* ==========================================
+   TABLETS / DESKTOP
+   ========================================== */
+
+@media (min-width: 431px) {
+
+    body {
+        padding: 24px 0;
+    }
+
+    .app {
+        width: 430px;
+
+        box-shadow:
+            0 0 25px rgba(0, 0, 0, 0.3);
+    }
+}
